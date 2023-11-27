@@ -1,0 +1,15 @@
+{
+	"name": "@iasd/adacentofcode",
+	"version": "0.0.0",
+	"description": "ad(a)vent of code entry for IamSebastian.dev",
+	"repository": "git@bitbucket.org:adabay/iamsebastiandev.git",
+	"author": "Sebastian Heinz <sebsatian@iamsebastian.dev>",
+	"license": "MIT",
+	"private": true,
+	"devDependencies": {
+		"tsx": "^4.5.0"
+	},
+	"scripts": {
+		"dev": "tsx runner.ts"
+	}
+}
