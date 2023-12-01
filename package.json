@@ -1,5 +1,6 @@
 {
 	"name": "@iasd/adacentofcode",
+	"type": "module",
 	"version": "0.0.0",
 	"description": "ad(a)vent of code entry for IamSebastian.dev",
 	"repository": "git@bitbucket.org:adabay/iamsebastiandev.git",
@@ -7,9 +8,13 @@
 	"license": "MIT",
 	"private": true,
 	"devDependencies": {
+		"@types/node": "^20.10.0",
 		"tsx": "^4.5.0"
 	},
 	"scripts": {
 		"dev": "tsx runner.ts"
+	},
+	"dependencies": {
+		"@iasd/mjolnir": "^1.0.11"
 	}
 }
