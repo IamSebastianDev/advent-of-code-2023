@@ -112,10 +112,10 @@
   resolved "https://registry.yarnpkg.com/@esbuild/win32-x64/-/win32-x64-0.18.20.tgz#786c5f41f043b07afb1af37683d7c33668858f6d"
   integrity sha512-kTdfRcSiDfQca/y9QIkng02avJ+NCaQvrMejlsB3RRv5sE9rRoeBPISaZpKxHELzRxZyLvNts1P27W3wV+8geQ==
 
-"@iasd/mjolnir@^1.0.11":
-  version "1.0.11"
-  resolved "https://registry.yarnpkg.com/@iasd/mjolnir/-/mjolnir-1.0.11.tgz#318dcb3c7a1415fed2169631dd3e60575c4ed0ed"
-  integrity sha512-yeTllJ3Njj3trft9T097v6FgyWi5KWJ08kgQ7PdixnSc3KDYWJZsHffZmiNqEwVUSjSznK4WN2yVtmKM56qMQg==
+"@iasd/mjolnir@^1.0.12":
+  version "1.0.15"
+  resolved "https://registry.yarnpkg.com/@iasd/mjolnir/-/mjolnir-1.0.15.tgz#edfaf88bbd614857bc2a29374c5d3c8008e8d320"
+  integrity sha512-G5+0wLI4Uw9ue9TwP9mub/SRFMUTsNpIvoqZu17mIfxnhPAEoH7I7cDxBT/9m9Bq+RAIlcH9zbXTC8vTSSsAlQ==
   dependencies:
     chalk "^4.1.0"
 

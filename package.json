@@ -15,6 +15,6 @@
 		"dev": "tsx runner.ts"
 	},
 	"dependencies": {
-		"@iasd/mjolnir": "^1.0.11"
+		"@iasd/mjolnir": "^1.0.12"
 	}
 }
