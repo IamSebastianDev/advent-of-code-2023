@@ -3,7 +3,7 @@
 import {writeFile,readFile,appendFile,rm} from "node:fs/promises";
 import {resolve,join} from "node:path";
 
-/** ValhallaScript compiled by @iasd/mjolnir@1.0.14 */
+/** ValhallaScript compiled by @iasd/mjolnir@1.0.16 */
 
 let  input  =  await readFile(`./entries/2/input.txt`, 'utf-8');
 
@@ -45,7 +45,6 @@ let  theory  =  input.split(`\n`)
         return samples
         .reduce(
             (acc, cur) => {
-                console.log(acc)
                 acc.red.push(cur.red ?? 0)
                 acc.green.push(cur.green ?? 0)
                 acc.blue.push(cur.blue ?? 0)

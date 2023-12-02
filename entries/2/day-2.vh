@@ -38,7 +38,6 @@ carve rune theory † input∫split<»\n«>
         return samples
         ∫reduce<
             <acc, cur> (*) <∂
-                skæld∫inscribe<acc>
                 acc.red.push<cur.red ?? 0>
                 acc.green.push<cur.green ?? 0>
                 acc.blue.push<cur.blue ?? 0>
