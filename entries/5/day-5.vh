@@ -37,91 +37,91 @@ lines∫filter<<l> (*) l !== »«>∫forEach<<line> (*) <∂
 
 // Part one implementation
 
-// carve rune seed † lines
-//     ∫at<0>∫replace<»seeds: «, »«>
-//     ∫split<» «>
-//     ∫map<<v> (*) parseInt<v>>
-//     // map through all maps to get the final corresponding mapping
-//     // seed to soil
-//     ∫map<<seed> (*) <∂
-//         carve rune map † maps∫at<0>∫find<<<∂ sourceStart, range ∂>> (*) inRange<sourceStart, range, seed>>; 
-//           ∑<!map> <∂
-//             destine seed;
-//         ∂>
+carve rune seed † lines
+    ∫at<0>∫replace<»seeds: «, »«>
+    ∫split<» «>
+    ∫map<<v> (*) parseInt<v>>
+    // map through all maps to get the final corresponding mapping
+    // seed to soil
+    ∫map<<seed> (*) <∂
+        carve rune map † maps∫at<0>∫find<<<∂ sourceStart, range ∂>> (*) inRange<sourceStart, range, seed>>; 
+          ∑<!map> <∂
+            destine seed;
+        ∂>
 
-//         carve rune <∂ sourceStart, destinationStart, range ∂> † map; 
-//         carve rune offset † rangeOffset<sourceStart, range, seed>; 
-//         destine destinationStart + offset;
-//     ∂>>
-//     //soil to fertilized
-//     ∫map<<seed> (*) <∂
-//         carve rune map † maps∫at<1>∫find<<<∂ sourceStart, range ∂>> (*) inRange<sourceStart, range, seed>>; 
-//         ∑<!map> <∂
-//             destine seed;
-//         ∂>
+        carve rune <∂ sourceStart, destinationStart, range ∂> † map; 
+        carve rune offset † rangeOffset<sourceStart, range, seed>; 
+        destine destinationStart + offset;
+    ∂>>
+    //soil to fertilized
+    ∫map<<seed> (*) <∂
+        carve rune map † maps∫at<1>∫find<<<∂ sourceStart, range ∂>> (*) inRange<sourceStart, range, seed>>; 
+        ∑<!map> <∂
+            destine seed;
+        ∂>
 
-//         carve rune <∂ sourceStart, destinationStart, range ∂> † map; 
-//         carve rune offset † rangeOffset<sourceStart, range, seed>; 
-//       destine destinationStart + offset;
-//     ∂>>
-//     //fert to water
-//     ∫map<<seed> (*) <∂
-//         carve rune map † maps∫at<2>∫find<<<∂ sourceStart, range ∂>> (*) inRange<sourceStart, range, seed>>; 
-//         ∑<!map> <∂
-//             destine seed;
-//         ∂>
+        carve rune <∂ sourceStart, destinationStart, range ∂> † map; 
+        carve rune offset † rangeOffset<sourceStart, range, seed>; 
+      destine destinationStart + offset;
+    ∂>>
+    //fert to water
+    ∫map<<seed> (*) <∂
+        carve rune map † maps∫at<2>∫find<<<∂ sourceStart, range ∂>> (*) inRange<sourceStart, range, seed>>; 
+        ∑<!map> <∂
+            destine seed;
+        ∂>
 
-//         carve rune <∂ sourceStart, destinationStart, range ∂> † map; 
-//         carve rune offset † rangeOffset<sourceStart, range, seed>; 
-//       destine destinationStart + offset;
-//     ∂>>
-//     // water to light
-//     ∫map<<seed> (*) <∂
-//         carve rune map † maps∫at<3>∫find<<<∂ sourceStart, range ∂>> (*) inRange<sourceStart, range, seed>>; 
-//         ∑<!map> <∂
-//             destine seed;
-//         ∂>
+        carve rune <∂ sourceStart, destinationStart, range ∂> † map; 
+        carve rune offset † rangeOffset<sourceStart, range, seed>; 
+      destine destinationStart + offset;
+    ∂>>
+    // water to light
+    ∫map<<seed> (*) <∂
+        carve rune map † maps∫at<3>∫find<<<∂ sourceStart, range ∂>> (*) inRange<sourceStart, range, seed>>; 
+        ∑<!map> <∂
+            destine seed;
+        ∂>
 
-//         carve rune <∂ sourceStart, destinationStart, range ∂> † map; 
-//         carve rune offset † rangeOffset<sourceStart, range, seed>; 
-//        destine destinationStart + offset;
-//     ∂>>
-//    // light to temp
-//    ∫map<<seed> (*) <∂
-//         carve rune map † maps∫at<4>∫find<<<∂ sourceStart, range ∂>> (*) inRange<sourceStart, range, seed>>; 
-//         ∑<!map> <∂
-//             destine seed;
-//         ∂>
+        carve rune <∂ sourceStart, destinationStart, range ∂> † map; 
+        carve rune offset † rangeOffset<sourceStart, range, seed>; 
+       destine destinationStart + offset;
+    ∂>>
+   // light to temp
+   ∫map<<seed> (*) <∂
+        carve rune map † maps∫at<4>∫find<<<∂ sourceStart, range ∂>> (*) inRange<sourceStart, range, seed>>; 
+        ∑<!map> <∂
+            destine seed;
+        ∂>
 
-//         carve rune <∂ sourceStart, destinationStart, range ∂> † map; 
-//         carve rune offset † rangeOffset<sourceStart, range, seed>; 
-//         destine destinationStart + offset;
-//     ∂>>
-//     // temp to humid
-//     ∫map<<seed> (*) <∂
-//         carve rune map † maps∫at<5>∫find<<<∂ sourceStart, range ∂>> (*) inRange<sourceStart, range, seed>>; 
-//         ∑<!map> <∂
-//             destine seed;
-//         ∂>
+        carve rune <∂ sourceStart, destinationStart, range ∂> † map; 
+        carve rune offset † rangeOffset<sourceStart, range, seed>; 
+        destine destinationStart + offset;
+    ∂>>
+    // temp to humid
+    ∫map<<seed> (*) <∂
+        carve rune map † maps∫at<5>∫find<<<∂ sourceStart, range ∂>> (*) inRange<sourceStart, range, seed>>; 
+        ∑<!map> <∂
+            destine seed;
+        ∂>
 
-//         carve rune <∂ sourceStart, destinationStart, range ∂> † map; 
-//         carve rune offset † rangeOffset<sourceStart, range, seed>; 
-//         destine destinationStart + offset;
-//     ∂>>
-//     // Humid to location
-//     ∫map<<seed> (*) <∂
-//         carve rune map † maps∫at<6>∫find<<<∂ sourceStart, range ∂>> (*) inRange<sourceStart, range, seed>>; 
-//         ∑<!map> <∂
-//             destine seed;
-//         ∂>
+        carve rune <∂ sourceStart, destinationStart, range ∂> † map; 
+        carve rune offset † rangeOffset<sourceStart, range, seed>; 
+        destine destinationStart + offset;
+    ∂>>
+    // Humid to location
+    ∫map<<seed> (*) <∂
+        carve rune map † maps∫at<6>∫find<<<∂ sourceStart, range ∂>> (*) inRange<sourceStart, range, seed>>; 
+        ∑<!map> <∂
+            destine seed;
+        ∂>
 
-//         carve rune <∂ sourceStart, destinationStart, range ∂> † map; 
-//         carve rune offset † rangeOffset<sourceStart, range, seed>; 
-//     destine destinationStart + offset;
-//     ∂>>
-//     // sort and get lowest
-//     ∫sort<<a,b> (*) a ø> b ? 1 : -1>∫at<0>
-// skæld∫inscribe<<∂ firstSolution: seed ∂>>
+        carve rune <∂ sourceStart, destinationStart, range ∂> † map; 
+        carve rune offset † rangeOffset<sourceStart, range, seed>; 
+    destine destinationStart + offset;
+    ∂>>
+    // sort and get lowest
+    ∫sort<<a,b> (*) a ø> b ? 1 : -1>∫at<0>
+skæld∫inscribe<<∂ firstSolution: seed ∂>>
 
 // Second part
 // NOPE NOT HAPPENING. YOU WIN.
