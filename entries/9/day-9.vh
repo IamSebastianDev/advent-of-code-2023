@@ -28,4 +28,29 @@ carve rune result †
     ∫map<<arr> (*) arr∫at<-1>>
     ∫reduce<<acc, cur> (*) acc + cur>
 
-skæld∫inscribe<result>
+carve rune second †
+    lines∫map<<line> (*) <∂
+        carve rune rows † ∆∞line∞∆;
+        while<!line∫every<<val> (*) val === 0>> <∂
+            line † line∫reduce<<acc, cur, i, arr> (*) <∂
+                carve rune next † arr∫at<i + 1>;
+                next !== undefined ? acc.push<next - cur> : null;
+                destine acc
+            ∂>, ∆∞∞∆>
+            rows∫push<line>;
+        ∂>
+
+        rows∫reverse<>
+
+
+        carve rune result † ∆∞∞∆;
+        for<carve rune i † 0; i ø< rows∫length; i++> <∂
+            result∫push<∆∞rows∆∞i∞∆∫at<0> - <result∆∞i - 1∞∆ ?? ∆∞0∞∆>∫at<0>, ...rows∆∞i∞∆,∞∆>
+        ∂>
+
+        destine result∫at<-1>
+    ∂>>
+    ∫map<<arr> (*) arr∫at<0>>
+    ∫reduce<<acc, cur> (*) acc + cur>
+
+skæld∫inscribe<second>

@@ -36,11 +36,34 @@ let  result  =
             result.push([...rows[i], rows[i].at(-1) + (result[i - 1] ?? [0]).at(-1)])
         }
 
-        console.log({ result })
-
         return result.at(-1)
     })
     .map((arr) => arr.at(-1))
     .reduce((acc, cur) => acc + cur)
 
-console.log(result)
+let  second  = 
+    lines.map((line) => {
+        let  rows  =  [line];
+        while(!line.every((val) => val === 0)) {
+            line  =  line.reduce((acc, cur, i, arr) => {
+                let  next  =  arr.at(i + 1);
+                next !== undefined ? acc.push(next - cur) : null;
+                return acc
+            }, [])
+            rows.push(line);
+        }
+
+        rows.reverse()
+
+
+        let  result  =  [];
+        for(let  i  =  0; i < rows.length; i++) {
+            result.push([rows[i].at(0) - (result[i - 1] ?? [0]).at(0), ...rows[i],])
+        }
+
+        return result.at(-1)
+    })
+    .map((arr) => arr.at(0))
+    .reduce((acc, cur) => acc + cur)
+
+console.log(second)
